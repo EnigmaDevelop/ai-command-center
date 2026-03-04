@@ -1,0 +1,11 @@
+langchain
+
+streamlit
+
+chromadb
+
+requests
+
+python-dotenv
+
+openai
