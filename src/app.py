@@ -1,9 +1,16 @@
 import streamlit as st
 
+# Absolute import — your project structure supports this
+from src.agent import Agent
+
+# Initialize agent
+agent = Agent()
+
+# Streamlit UI
 st.title("AI Command Center")
 
-user_input = st.text_input("Enter a command:")
+command = st.text_input("Enter a command:")
 
 if st.button("Run"):
-
-st.write("This is where the agent response will appear.")
+    response = agent.run(command)
+    st.write(response)
