@@ -13,7 +13,7 @@ st.set_page_config(
 
 # --- PAGE TITLE ---
 st.title("🤖 AI Command Center")
-st.caption("Your intelligent agent powered by Ollama Server-llama2 and Streamlit")
+st.caption("Your intelligent agent powered by Ollama Server-llama3 and Streamlit")
 
 
 # --- SESSION STATE INITIALIZATION ---

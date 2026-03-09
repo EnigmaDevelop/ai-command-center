@@ -11,7 +11,7 @@ from .tools import AVAILABLE_TOOLS
 load_dotenv()
 
 # Model configuration
-MODEL_NAME = "llama2"  # Using llama2 which is already installed. Change to "mistral" if you pull it.
+MODEL_NAME = "llama3"  # Using llama3 which is already installed. Change to "mistral" if you pull it.
 OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
 
 try:
