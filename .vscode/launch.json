@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Streamlit Debug",
+            "type": "python",
+            "request": "launch",
+            // Bizim komutumuz: python -m streamlit run src/app.py
+            // "module": "-m" den sonraki kısmı belirtir.
+            "module": "streamlit",
+            // "args": komuttan sonraki argümanları bir liste olarak belirtir.
+            "args": [
+                "run",
+                "src/app.py"
+            ],
+            // Bu ayar, sadece kendi yazdığınız kodda durmanızı sağlar,
+            // streamlit gibi kütüphanelerin içine girmenizi engeller.
+            // Yeni başlayanlar için çok kullanışlıdır.
+            "justMyCode": true
+        }
+    ]
+}
