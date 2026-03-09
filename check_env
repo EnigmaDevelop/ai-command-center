@@ -1,0 +1,30 @@
+# check_env.py
+
+import os
+from dotenv import load_dotenv
+
+print("--- Teşhis Başlatıldı ---")
+
+# .env dosyasının bulunduğu yolu yüklemeyi deniyoruz
+# Bu, script'in çalıştığı yerden .env dosyasını arayacaktır.
+load_success = load_dotenv()
+
+if load_success:
+    print(".env dosyası başarıyla bulundu ve yüklendi.")
+else:
+    print("UYARI: .env dosyası bulunamadı veya yüklenemedi!")
+    print("Lütfen dosyanın adının '.env' olduğundan ve bu script ile aynı klasörde olduğundan emin olun.")
+
+# Ortam değişkenini okumayı deniyoruz
+api_key = os.environ.get("GOOGLE_API_KEY")
+
+if api_key:
+    print("GOOGLE_API_KEY değişkeni başarıyla okundu.")
+    # Güvenlik için anahtarın sadece bir kısmını gösteriyoruz
+    print(f"API Anahtarının ilk 5 hanesi: {api_key[:5]}")
+    print(f"API Anahtarının son 5 hanesi: {api_key[-5:]}")
+else:
+    print("HATA: GOOGLE_API_KEY ortam değişkeni bulunamadı!")
+    print("Lütfen .env dosyasının içinde 'GOOGLE_API_KEY=...' satırının doğru yazıldığını kontrol edin.")
+
+print("--- Teşhis Tamamlandı ---")
